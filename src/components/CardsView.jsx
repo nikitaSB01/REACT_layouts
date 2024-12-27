@@ -15,7 +15,7 @@ CardsView.propTypes = {
   cards: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      prise: PropTypes.string.isRequired,
+      price: PropTypes.string.isRequired,
       color: PropTypes.string.isRequired,
       img: PropTypes.string.isRequired,
     })

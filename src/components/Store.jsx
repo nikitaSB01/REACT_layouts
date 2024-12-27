@@ -50,7 +50,7 @@ function Store() {
   };
 
   return (
-    <div>
+    <div className="container">
       <IconSwitch
         icon={view === "module" ? "view_list" : "view_module"}
         onSwitch={handleSwitch}

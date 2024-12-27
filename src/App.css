@@ -1,37 +1,164 @@
+/* Общий стиль для страницы */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2); /* Градиентный фон */
+    min-height: 100vh;
+    display: flex;
+    /*     justify-content: center;*/
+    align-items: flex-start;
+}
+
+#root {
+    width: 100%;
+}
+
+/* Контейнер приложения */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* CardsView: стиль карточек */
 .cards-view {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
+/* Стиль одной карточки товара */
 .shop-card {
-    width: 200px;
-    border: 1px solid #ddd;
-    padding: 10px;
+    width: 250px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding: 15px;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
 }
 
+.shop-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображение товара */
+.shop-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Название товара */
+.shop-card div:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Цвет товара */
+.shop-card div:nth-child(2) {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Цена товара */
+.shop-card div:nth-child(3) {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 15px;
+}
+
+/* Кнопка добавления в корзину */
+.shop-card button {
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shop-card button:hover {
+    background: #1565c0;
+}
+
+/* ListView: стиль списка товаров */
 .list-view {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    justify-content: center;
 }
 
+/* Стиль одного товара в списке */
 .shop-item {
     display: flex;
     align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     gap: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
 }
 
-.shop-item img,
-.shop-card img {
+.shop-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображение товара в списке */
+.shop-item img {
     width: 100px;
-    height: auto;
+    border-radius: 8px;
 }
 
-.i-src {
-    width: 40px;
-    height: 40px;
+/* Текстовые данные товара в списке */
+.shop-item div {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Кнопка добавления в корзину для списка */
+.shop-item button {
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shop-item button:hover {
+    background: #1565c0;
+}
+
+/* Стиль иконки переключения */
+.material-icons {
+    font-size: 32px;
+    color: #555;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: color 0.3s;
+}
+
+.material-icons:hover {
+    color: #1976d2;
 }
