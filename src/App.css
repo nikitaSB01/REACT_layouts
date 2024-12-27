@@ -1,0 +1,37 @@
+.cards-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.shop-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shop-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.shop-item img,
+.shop-card img {
+    width: 100px;
+    height: auto;
+}
+
+.i-src {
+    width: 40px;
+    height: 40px;
+}
